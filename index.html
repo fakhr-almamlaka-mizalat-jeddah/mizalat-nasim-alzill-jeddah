@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نسيم الظل للمظلات والسواتر — جدة</title>
+<meta name="description" content="مؤسسة نسيم الظل بجدة: توريد وتركيب المظلات، السواتر، الشبوك، بيوت الشعر، البرجولات، الهناجر، القرميد والساندوتش بانل. تصنيع محلي، فريق فني متخصص، وضمان على التنفيذ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand: #F2E9D8;
+    --sand-deep: #E7D9BE;
+    --ink: #241C14;
+    --ink-soft: #5B4A36;
+    --teal: #1F6F6F;
+    --teal-deep: #134C4C;
+    --ochre: #C68B3C;
+    --line: rgba(36,28,20,0.12);
+    --radius: 3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--ink);
+    font-family:'Tajawal',sans-serif;
+    line-height:1.9;
+  }
+  h1,h2,h3{
+    font-family:'Amiri', serif;
+    font-weight:700;
+    margin:0 0 .5em;
+    color:var(--ink);
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(242,233,216,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Amiri',serif;font-size:22px;font-weight:700;}
+  .brand small{display:block;font-family:'Tajawal',sans-serif;font-size:12px;font-weight:400;color:var(--ink-soft);}
+  nav{display:flex;gap:26px;font-size:15px;}
+  nav a{border-bottom:1px solid transparent;padding-bottom:3px;transition:border-color .2s;}
+  nav a:hover{border-color:var(--ochre);}
+  .call-btn{
+    background:var(--teal);color:#fff;padding:10px 20px;border-radius:var(--radius);
+    font-size:14px;white-space:nowrap;
+  }
+
+  /* hero */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:90px 0 70px;
+    background:
+      radial-gradient(ellipse at 85% 20%, rgba(198,139,60,.18), transparent 55%),
+      radial-gradient(ellipse at 10% 80%, rgba(31,111,111,.16), transparent 50%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+  .eyebrow{color:var(--teal-deep);font-size:15px;margin-bottom:14px;}
+  .hero h1{font-size:46px;line-height:1.35;max-width:15ch;}
+  .hero p.lead{font-size:18px;color:var(--ink-soft);max-width:46ch;margin:18px 0 30px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-primary{background:var(--ochre);color:#fff;padding:14px 26px;border-radius:var(--radius);font-weight:700;}
+  .btn-ghost{border:1px solid var(--ink);padding:14px 26px;border-radius:var(--radius);}
+
+  .hero-art{
+    background:var(--teal-deep);
+    border-radius:6px;
+    padding:32px;
+    position:relative;
+  }
+  .hero-art svg{width:100%;height:auto;}
+  .hero-stats{display:flex;gap:0;margin-top:30px;border-top:1px solid var(--line);padding-top:26px;}
+  .stat{flex:1;padding-left:20px;}
+  .stat b{display:block;font-family:'Amiri',serif;font-size:30px;color:var(--teal-deep);}
+  .stat span{font-size:13px;color:var(--ink-soft);}
+
+  /* services */
+  .section{padding:80px 0;}
+  .section-head{max-width:560px;margin-bottom:46px;}
+  .section-head h2{font-size:34px;}
+  .section-head p{color:var(--ink-soft);font-size:16px;}
+
+  .services-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);
+  }
+  .service-card{background:var(--sand);padding:30px 24px;transition:background .2s;}
+  .service-card:hover{background:var(--sand-deep);}
+  .service-card .num{font-family:'Amiri',serif;color:var(--ochre);font-size:14px;}
+  .service-card h3{font-size:19px;margin:10px 0 8px;}
+  .service-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+
+  /* why us */
+  .why{background:var(--ink);color:var(--sand);}
+  .why .section-head h2{color:var(--sand);}
+  .why .section-head p{color:#C9BBA4;}
+  .why-list{display:grid;grid-template-columns:1fr 1fr;gap:36px 60px;}
+  .why-item{border-top:1px solid rgba(242,233,216,.2);padding-top:18px;}
+  .why-item h3{color:var(--sand);font-size:18px;font-family:'Tajawal',sans-serif;font-weight:700;margin-bottom:8px;}
+  .why-item p{color:#C9BBA4;font-size:14.5px;margin:0;}
+
+  /* process */
+  .process{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .step{flex:1;padding:30px 22px;border-left:1px solid var(--line);}
+  .step:last-child{border-left:none;}
+  .step h3{font-size:17px;margin-bottom:6px;}
+  .step p{font-size:13.5px;color:var(--ink-soft);margin:0;}
+  .step .step-no{font-family:'Amiri',serif;font-size:26px;color:var(--teal);}
+
+  /* areas */
+  .areas p.tag-line{color:var(--ink-soft);font-size:15px;line-height:2.1;}
+
+  /* contact / cta band */
+  .cta-band{
+    background:var(--teal);color:#fff;padding:60px 0;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;
+  }
+  .cta-band h2{color:#fff;font-size:30px;max-width:20ch;}
+  .cta-band .call-btn{background:var(--ochre);}
+
+  footer{background:var(--ink);color:#C9BBA4;padding:40px 0;font-size:14px;}
+  .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .services-grid{grid-template-columns:1fr 1fr;}
+    .why-list{grid-template-columns:1fr;}
+    .process{flex-wrap:wrap;}
+    .step{flex:1 1 50%;border-bottom:1px solid var(--line);}
+    nav{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      نسيم الظل
+      <small>للمظلات والسواتر — جدة</small>
+    </div>
+    <nav>
+      <a href="#services">خدماتنا</a>
+      <a href="#why">لماذا نحن</a>
+      <a href="#process">مراحل العمل</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <a class="call-btn" href="https://wa.me/966538354352">واتساب 0538354352</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">مؤسسة مرخصة لتنفيذ مشاريع الظل والتسييج — جدة وضواحيها</div>
+      <h1>ظل يليق بمكانك، وسواتر تحفظ خصوصيتك</h1>
+      <p class="lead">
+        نُصمّم ونُصنّع ونُركّب المظلات والسواتر وبيوت الشعر والبرجولات بخامات مختارة
+        ودقة تنفيذ تتحمل حرارة الصيف ورطوبة جدة الساحلية. من المنزل إلى المشروع
+        الحكومي، فريقنا معكم من المعاينة حتى التسليم.
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="https://wa.me/966538354352">اطلب معاينة مجانية</a>
+        <a class="btn-ghost" href="#services">تصفّح الخدمات</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>+20</b><span>عامًا من الخبرة الفنية في التنفيذ</span></div>
+        <div class="stat"><b>٨</b><span>تخصصات رئيسية تحت سقف واحد</span></div>
+        <div class="stat"><b>ضمان</b><span>مكتوب على التصنيع والتركيب</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20,280 Q200,40 380,280" fill="none" stroke="#F2E9D8" stroke-width="10" stroke-linecap="round"/>
+        <path d="M90,280 L200,120 L310,280" fill="none" stroke="#C68B3C" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M20,280 L380,280" stroke="#F2E9D8" stroke-width="4" opacity=".5"/>
+        <path d="M310,110 C340,102 360,116 390,108" fill="none" stroke="#C68B3C" stroke-width="5" stroke-linecap="round"/>
+        <path d="M318,140 C345,133 368,146 398,138" fill="none" stroke="#F2E9D8" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>خدماتنا</h2>
+      <p>ثمانية تخصصات مترابطة، ينفّذها فريق واحد بمعايير مصنع واحد — من الحديد إلى القماش إلى التشطيب النهائي.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="num">٠١</div><h3>مظلات</h3><p>مظلات سيارات، مسابح، أسطح، مداخل، ومظلات مقاهي وحدائق بتصاميم قماشية ومعدنية.</p></div>
+      <div class="service-card"><div class="num">٠٢</div><h3>سواتر</h3><p>سواتر حديد وخشب وبلاستيك ولكسان، لخصوصية الأحواش والبلكونات والواجهات.</p></div>
+      <div class="service-card"><div class="num">٠٣</div><h3>شبوك</h3><p>شبوك مزارع وملاعب ومنشآت أمنية، وشبوك حماية للمواقع الحكومية والخاصة.</p></div>
+      <div class="service-card"><div class="num">٠٤</div><h3>بيوت شعر وخيام</h3><p>بيوت شعر ملكية ومجالس وخيام مناسبات، بلمسة تراثية وتجهيزات داخلية كاملة.</p></div>
+      <div class="service-card"><div class="num">٠٥</div><h3>برجولات</h3><p>برجولات حديد وخشب وقماش لمساحات الجلوس الخارجية والمسابح وواجهات المنازل.</p></div>
+      <div class="service-card"><div class="num">٠٦</div><h3>هناجر ومستودعات</h3><p>إنشاء هناجر معدنية وزراعية وصناعية بأحمال مدروسة وتسليم سريع.</p></div>
+      <div class="service-card"><div class="num">٠٧</div><h3>ساندوتش بانل وقرميد</h3><p>ملاحق وغرف ساندوتش بانل معزولة حراريًا، وتغطية أسقف بالقرميد بألوان متعددة.</p></div>
+      <div class="service-card"><div class="num">٠٨</div><h3>تلبيس الديوانيات</h3><p>تلبيس وتجهيز الديوانيات والغرف الملحقة بخامات تجمع بين العزل والمظهر الراقي.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>لماذا نسيم الظل</h2>
+      <p>القرار في اختيار مقاول المظلات والسواتر قرار طويل الأثر — إليك ما نلتزم به في كل مشروع.</p>
+    </div>
+    <div class="why-list">
+      <div class="why-item"><h3>معاينة ميدانية قبل أي عرض سعر</h3><p>لا نُسعّر عن بُعد؛ فريقنا يزور الموقع، يأخذ القياسات الفعلية، ويناقش استخدامك للمساحة قبل اقتراح التصميم.</p></div>
+      <div class="why-item"><h3>تصنيع داخلي</h3><p>الهياكل والقص واللحام تتم في ورشتنا، ما يمنحنا تحكمًا في الجودة والموعد لا نحصل عليه عند التعاقد من الباطن.</p></div>
+      <div class="why-item"><h3>خامات تناسب مناخ جدة</h3><p>نختار الدهانات والمعادن بناءً على الرطوبة الساحلية، لا فقط الحرارة، لتقليل التآكل المبكر الذي يواجهه كثير من التركيبات القريبة من البحر.</p></div>
+      <div class="why-item"><h3>ضمان مكتوب</h3><p>كل مشروع يخرج بضمان موثّق على التصنيع والتركيب، ورقم تواصل مباشر لأي متابعة لاحقة.</p></div>
+      <div class="why-item"><h3>خبرة بالمشاريع الحكومية</h3><p>تنفيذ سبق له العمل مع مدارس ومواقف حكومية ومستشفيات وجامعات، بما يستلزمه ذلك من التزام بالمواصفات والمواعيد.</p></div>
+      <div class="why-item"><h3>فريق واحد لكل التخصصات</h3><p>مشروع يجمع مظلة وسور وبيت شعر؟ تتعامل مع جهة واحدة تنسّق التنفيذ بدل تعدد المقاولين.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>كيف نعمل</h2>
+      <p>خمس مراحل واضحة من أول اتصال إلى تسليم المفتاح.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="process">
+      <div class="step"><div class="step-no">١</div><h3>التواصل والمعاينة</h3><p>نستقبل طلبك عبر واتساب أو مكالمة، ونحدد موعد معاينة مناسب لك.</p></div>
+      <div class="step"><div class="step-no">٢</div><h3>التصميم والتسعير</h3><p>نقترح التصميم والخامة المناسبة، ونمنحك عرض سعر مفصّل بلا التزام.</p></div>
+      <div class="step"><div class="step-no">٣</div><h3>التصنيع</h3><p>يبدأ التنفيذ في الورشة وفق المقاسات والمواصفات المتفق عليها.</p></div>
+      <div class="step"><div class="step-no">٤</div><h3>التركيب</h3><p>فريق ميداني متخصص ينفذ التركيب مع مراعاة كاملة لسلامة الموقع.</p></div>
+      <div class="step"><div class="step-no">٥</div><h3>التسليم والضمان</h3><p>تسليم نهائي بعد الفحص، مع وثيقة ضمان ونظافة كاملة للموقع.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;">
+    <h2>جاهز لمعاينة مجانية لمساحتك؟</h2>
+    <a class="call-btn" href="https://wa.me/966538354352">تواصل الآن — 0538354352</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap footer-inner">
+    <div>
+      <strong style="color:#F2E9D8;font-family:'Amiri',serif;font-size:18px;">نسيم الظل للمظلات والسواتر</strong>
+      <p style="max-width:40ch;margin-top:8px;">جدة، المملكة العربية السعودية — تنفيذ المظلات، السواتر، الشبوك، بيوت الشعر، البرجولات، الهناجر، القرميد، والساندوتش بانل.</p>
+    </div>
+    <div>
+      <p>هاتف / واتساب: 0538354352</p>
+      <p>© جميع الحقوق محفوظة — نسيم الظل</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
