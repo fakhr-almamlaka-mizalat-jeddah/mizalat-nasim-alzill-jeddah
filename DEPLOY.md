@@ -15,8 +15,15 @@
      `pergolas.html`, `hangars.html`, `sandwich-panel.html`, `qarmids.html`
    - `style.css` (نسخة قابلة للقراءة والتعديل لاحقًا)
    - `style.min.css` (النسخة المضغوطة التي تستدعيها الصفحات فعليًا)
-   - `logo.svg`
+   - `site.js` (سكربت صندوق عرض الصور — التنقل بالسهمين)
+   - `llms.txt` (ملف تعريف الموقع لوكلاء الذكاء الاصطناعي)
    - `robots.txt`, `sitemap.xml`
+
+   ملاحظة: شعارا الرأس والتذييل (`logo-nasim-alzill-sawater-jeddah1.webp`
+   و`logo-nasim-alzill-sawater-jeddah2.webp`) وصورة المقدمة
+   (`ads-mizalat-pergolas-sawaters-nasim-alzill-jeddah.webp`) يجب أن تكون
+   موجودة فعليًا داخل `images/main/` في مستودعكم — هذه الصفحات تستدعيها
+   بهذه الأسماء بالضبط.
 3. ارفعوا (commit + push) هذه الملفات إلى فرع `main`.
 
 ## 2) ربط المستودع بـ Cloudflare Pages
@@ -25,9 +32,9 @@
 2. اختاروا مستودع `mizalat-nasim-alzill-jeddah`.
 3. إعدادات البناء: لا حاجة لأمر بناء (Build command فارغ) لأن الموقع HTML/CSS
    ثابت بالكامل — فقط اضبطوا **Output directory** على `/` (الجذر).
-4. بعد أول نشر، اربطوا دومينكم الفعلي (مثل `nasim-alzill.com`) من تبويب
+4. بعد أول نشر، اربطوا دومينكم الفعلي (مثل `mizalat-nasim-alzill-jeddah.pages.dev`) من تبويب
    **Custom domains**، وحدّثوا الروابط التالية لتطابق الدومين الحقيقي بدل
-   `nasim-alzill.com` التجريبي المستخدم حاليًا في:
+   `mizalat-nasim-alzill-jeddah.pages.dev` التجريبي المستخدم حاليًا في:
    - وسم `<link rel="canonical">` في كل صفحة
    - ملف `sitemap.xml`
    - حقل `url` داخل بيانات Schema.org في `index.html`
