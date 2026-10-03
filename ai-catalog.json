@@ -1,0 +1,23 @@
+{
+  "name": "نسيم الظل للمظلات والسواتر",
+  "description": "مؤسسة سعودية في جدة متخصصة في تصميم وتصنيع وتركيب المظلات والسواتر والشبابيك والشبوك وبيوت الشعر والبرجولات والهناجر والساندوتش بانل والقرميد.",
+  "url": "https://mizalat-nasim-alzill-jeddah.pages.dev/",
+  "contact": {
+    "phone": "+966505664631",
+    "whatsapp": "https://wa.me/966505664631",
+    "email": "mizalatnaseemalzilljeddah@gmail.com"
+  },
+  "areaServed": ["جدة", "مكة المكرمة"],
+  "pages": [
+    { "title": "الرئيسية", "url": "/index.html" },
+    { "title": "المظلات", "url": "/mizalat.html" },
+    { "title": "السواتر", "url": "/sawaters.html" },
+    { "title": "الشبابيك والشبوك", "url": "/shabaks.html" },
+    { "title": "بيوت الشعر", "url": "/byout-shaar.html" },
+    { "title": "البرجولات", "url": "/pergolas.html" },
+    { "title": "الهناجر والمستودعات", "url": "/hangars.html" },
+    { "title": "الساندوتش بانل", "url": "/sandwich-panel.html" },
+    { "title": "القرميد", "url": "/qarmids.html" }
+  ],
+  "note": "الأسعار المذكورة في صفحات الموقع تقريبية وتوضيحية؛ السعر النهائي يتحدد بعد معاينة ميدانية."
+}
