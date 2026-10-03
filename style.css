@@ -136,7 +136,76 @@ footer{background:var(--ink);color:#C9BBA4;padding:36px 0;font-size:14px;}
 .step p{font-size:13.5px;color:var(--ink-soft);margin:0;}
 .step .step-no{font-family:'Amiri',serif;font-size:26px;color:var(--teal);}
 
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+/* شريط الصور المتحركة أعلى كل صفحة */
+.hero-carousel{position:relative;height:420px;overflow:hidden;}
+.hero-carousel .hc-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease;}
+.hero-carousel .hc-slide.active{opacity:1;}
+.hero-carousel .hc-slide img{width:100%;height:100%;object-fit:cover;}
+.hero-carousel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,9,.55),rgba(20,15,9,.75));}
+.hero-carousel .hc-text{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;}
+.hero-carousel .eyebrow{color:#E7D9BE;}
+.hero-carousel h1{color:#fff;}
+.hero-carousel p{color:#E7D9BE;}
+.hc-dots{position:absolute;bottom:18px;right:50%;transform:translateX(50%);z-index:3;display:flex;gap:8px;}
+.hc-dots button{width:9px;height:9px;border-radius:50%;border:none;background:rgba(255,255,255,.45);cursor:pointer;padding:0;}
+.hc-dots button.active{background:#C68B3C;}
+@media (max-width:820px){.hero-carousel{height:460px;}}
+
+/* أزرار عائمة: اتصال + واتساب */
+.float-actions{position:fixed;bottom:22px;left:18px;z-index:150;display:flex;flex-direction:column;gap:12px;}
+.float-actions a{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.25);}
+.float-actions .fa-call{background:var(--ochre);}
+.float-actions .fa-wa{background:#25D366;animation:fa-pulse 2.2s infinite;}
+@keyframes fa-pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5);}70%{box-shadow:0 0 0 14px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
+
+/* شريط الدعوة لإجراء (مشاركة الموقع + اتصال + واتساب) */
+.cta-band2{background:linear-gradient(135deg,var(--teal-deep),var(--teal));color:#fff;padding:54px 0;text-align:center;}
+.cta-band2 h2{color:#fff;font-size:30px;}
+.cta-band2 p{color:#E7D9BE;margin-top:8px;}
+.cta-band2 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px;}
+.cta-band2 .cta-row a{padding:14px 24px;border-radius:3px;font-weight:700;}
+.cta-btn-share{background:var(--ochre);color:#fff;}
+.cta-btn-phone{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6);}
+.cta-btn-wa{background:#fff;color:var(--teal-deep);}
+
+/* الأسئلة الشائعة بنظام أكورديون */
+.faq-item{border-top:1px solid var(--line);}
+.faq-item:last-child{border-bottom:1px solid var(--line);}
+.faq-q{width:100%;text-align:right;background:none;border:none;font-family:'Tajawal',sans-serif;font-size:16.5px;font-weight:700;color:var(--ink);padding:18px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;}
+.faq-q .plus{font-size:22px;color:var(--ochre);transition:transform .25s;flex-shrink:0;}
+.faq-item[open] .faq-q .plus{transform:rotate(45deg);}
+.faq-a{margin:0 0 18px;color:var(--ink-soft);font-size:15px;max-width:75ch;}
+details.faq-item summary::-webkit-details-marker{display:none;}
+
+/* قسم مواعيد العمل + مشاركة الموقع في التذييل */
+.hours-box{background:rgba(242,233,216,.06);border:1px solid rgba(242,233,216,.15);border-radius:4px;padding:18px 20px;margin-top:10px;}
+.hours-box a.map-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:var(--ochre);color:#fff;padding:9px 16px;border-radius:3px;font-size:13.5px;}
+.designer-credit{text-align:center;border-top:1px solid rgba(242,233,216,.15);margin-top:30px;padding-top:18px;font-size:13px;}
+.designer-credit a{color:#C68B3C;}
+
+/* شبكة الخدمات بصورة + شرح + رابط (الرئيسية) */
+.service-feature{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:center;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff;margin-bottom:22px;}
+.service-feature .sf-img{aspect-ratio:4/3;overflow:hidden;}
+.service-feature .sf-img img{width:100%;height:100%;object-fit:cover;}
+.service-feature .sf-body{padding:18px 22px 18px 0;}
+.service-feature h3{font-size:20px;margin-bottom:8px;}
+.service-feature p{color:var(--ink-soft);font-size:15px;margin-bottom:12px;}
+.service-feature a.more{color:var(--teal-deep);font-weight:700;font-size:14px;}
+@media (max-width:820px){.service-feature{grid-template-columns:1fr;}.service-feature .sf-body{padding:0 18px 18px;}}
+
+/* معرض أعمال مصغر (الرئيسية) */
+.mini-portfolio{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.mini-portfolio a{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;border-radius:3px;}
+.mini-portfolio img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
+.mini-portfolio a:hover img{transform:scale(1.06);}
+.mini-portfolio span{position:absolute;inset-inline:0;bottom:0;background:linear-gradient(0deg,rgba(0,0,0,.7),transparent);color:#fff;font-size:12.5px;padding:18px 10px 8px;}
+@media (max-width:820px){.mini-portfolio{grid-template-columns:1fr 1fr;}}
+
+/* نطاق التغطية */
+.coverage-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+.coverage-tags span{background:var(--sand-deep);border:1px solid var(--line);padding:7px 14px;border-radius:20px;font-size:13.5px;color:var(--ink-soft);}
+
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;}.hero-carousel .hc-slide{transition:none;}.float-actions .fa-wa{animation:none;}}
 
 @media (max-width:820px){
   nav{display:none;}
