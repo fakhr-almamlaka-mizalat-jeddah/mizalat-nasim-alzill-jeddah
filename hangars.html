@@ -12,7 +12,7 @@
 <meta property="og:locale" content="ar_SA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.min.css">
 <script type="application/ld+json">
 {
@@ -32,23 +32,36 @@
 <body>
 <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
 
+<div class="menu-overlay" id="menu-overlay"></div>
+<nav class="site-menu" id="site-menu" aria-label="القائمة الرئيسية">
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="index.html#services">خدماتنا</a></li>
+    <li><a href="index.html#about">من نحن</a></li>
+    <li><a href="index.html#portfolio">أعمالنا</a></li>
+    <li><a href="index.html#faq">الأسئلة الشائعة</a></li>
+    <li><a href="#contact">تواصل معنا</a></li>
+    <li><a href="mizalat.html">مظلات</a></li>
+    <li><a href="sawaters.html">سواتر</a></li>
+    <li><a href="shabaks.html">شبابيك وشبوك</a></li>
+    <li><a href="byout-shaar.html">بيوت شعر</a></li>
+    <li><a href="pergolas.html">برجولات</a></li>
+    <li><a href="hangars.html" class="active">هناجر</a></li>
+    <li><a href="sandwich-panel.html">ساندوتش بانل</a></li>
+    <li><a href="qarmids.html">قرميد</a></li>
+  </ul>
+</nav>
+
 <header>
   <div class="wrap header-inner">
     <a class="brand" href="index.html">
       <img src="images/main/logo-nasim-alzill-sawater-jeddah1.webp" alt="شعار نسيم الظل للمظلات والسواتر" width="150" height="46" loading="eager" fetchpriority="high" decoding="async">
+      <span class="wordmark">نسيم الظل</span>
     </a>
-    <nav aria-label="روابط رئيسية"><ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="mizalat.html">مظلات</a></li>
-      <li><a href="sawaters.html">سواتر</a></li>
-      <li><a href="shabaks.html">شبابيك وشبوك</a></li>
-      <li><a href="byout-shaar.html">بيوت شعر</a></li>
-      <li><a href="pergolas.html">برجولات</a></li>
-      <li><a href="hangars.html" class="active">هناجر</a></li>
-      <li><a href="sandwich-panel.html">ساندوتش بانل</a></li>
-      <li><a href="qarmids.html">قرميد</a></li>
-    </ul></nav>
-    <a class="call-btn" href="https://wa.me/966505664631">واتساب 0505664631</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="site-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <a class="call-btn" href="https://wa.me/966505664631?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D9%86%D8%B3%D9%8A%D9%85%20%D8%A7%D9%84%D8%B8%D9%84%20%D9%84%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1%20%F0%9F%8C%BF%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%88%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A.">اطلب عرض سعر</a>
   </div>
 </header>
 
@@ -138,6 +151,24 @@
     <li><strong>التسليم:</strong> فحص نهائي للسلامة الإنشائية وتسليم وثيقة الضمان.</li>
   </ul>
 
+  <h2>معرض الصور الكامل — كل أعمالنا في الهناجر والمستودعات</h2>
+  <p>مجموعة شاملة من الصور الفعلية لمشاريعنا المنفذة، اضغط أي صورة للتكبير والتنقل بالسهمين.</p>
+  <div class="full-gallery">
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-3d-steel-structure-warehouse-design-nasim-alzill-jeddah4.webp" alt="الهناجر والمستودعات — صورة 1 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-industrial-blue-steel-warehouses-nasim-alzill-jeddah3.webp" alt="الهناجر والمستودعات — صورة 2 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-industrial-commercial-steel-warehouse-nasim-alzill-jeddah6.webp" alt="الهناجر والمستودعات — صورة 3 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-industrial-commercial-steel-warehouse-nasim-alzill-jeddah7.webp" alt="الهناجر والمستودعات — صورة 4 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-industrial-steel-structure-construction-nasim-alzill-jeddah.webp" alt="الهناجر والمستودعات — صورة 5 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-industrial-steel-structure-construction-nasim-alzill-jeddah2.webp" alt="الهناجر والمستودعات — صورة 6 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-industrial-warehouse-nasim-alzill-jeddah11.webp" alt="الهناجر والمستودعات — صورة 7 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-metal-warehouse-shed-nasim-alzill-jeddah.webp" alt="الهناجر والمستودعات — صورة 8 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-nasim-alzill-jeddah-steel-structure.webp" alt="الهناجر والمستودعات — صورة 9 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-nasim-alzill-jeddah-warehouse-frame.webp" alt="الهناجر والمستودعات — صورة 10 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-nasim-alzill-jeddah-warehouses.webp" alt="الهناجر والمستودعات — صورة 11 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-steel-frame-warehouse-construction-nasim-alzill-jeddah5.webp" alt="الهناجر والمستودعات — صورة 12 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+    <div class="ph"><img class="lb-img" src="images/hangars/hangar-steel-hangars-structure-jeddah-nasim-alzill3.webp" alt="الهناجر والمستودعات — صورة 13 من أعمال نسيم الظل بجدة" width="400" height="400" loading="lazy" decoding="async"></div>
+  </div>
+
   <h2>الضمان وخدمة ما بعد البيع</h2>
   <p>
     نقدّم ضمانًا يصل إلى 10 سنوات على الهياكل الفولاذية، مع متابعة دورية اختيارية لفحص وصلات اللحام
@@ -185,7 +216,7 @@
     <div class="cta-row">
       <a class="cta-btn-share" href="https://wa.me/966505664631?text=مرحبًا%2C%20أرغب%20بمشاركة%20موقعي%20للحصول%20على%20معاينة%20سريعة">مشاركة موقعك لمعاينة سريعة</a>
       <a class="cta-btn-phone" href="tel:+966505664631">0505664631</a>
-      <a class="cta-btn-wa" href="https://wa.me/966505664631">تواصل واتساب</a>
+      <a class="cta-btn-wa" href="https://wa.me/966505664631?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D9%86%D8%B3%D9%8A%D9%85%20%D8%A7%D9%84%D8%B8%D9%84%20%D9%84%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1%20%F0%9F%8C%BF%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%88%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A.">تواصل واتساب</a>
     </div>
   </div>
 </section>
@@ -196,10 +227,10 @@
       <img src="images/main/logo-nasim-alzill-sawater-jeddah2.webp" alt="شعار نسيم الظل" width="130" height="40" loading="lazy" decoding="async" style="margin-bottom:12px;">
       <p style="max-width:40ch;">جدة، المملكة العربية السعودية — تنفيذ المظلات، السواتر، الشبابيك والشبوك، بيوت الشعر، البرجولات، الهناجر، القرميد، والساندوتش بانل.</p>
       <div class="social-row" aria-label="حسابات التواصل الاجتماعي">
-        <a href="#" aria-label="إنستغرام"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        <a href="https://www.instagram.com/nzyrlqhtny?utm_source=qr&igsh=cDl2NXQ5enRoMGU2" target="_blank" rel="noopener" aria-label="إنستغرام"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
         <a href="#" aria-label="سناب شات"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c3 0 5 2.2 5 5.2 0 1.6.2 2.6.7 3.4.5.7 1.3 1 1.3 1.6 0 .8-1.4 1.1-2.1 1.3-.2.6-.5 1.4-1.3 1.4-.6 0-1-.3-1.7-.3-.9 0-1.5.9-3 .9s-2.1-.9-3-.9c-.7 0-1.1.3-1.7.3-.8 0-1.1-.8-1.3-1.4-.7-.2-2.1-.5-2.1-1.3 0-.6.8-.9 1.3-1.6.5-.8.7-1.8.7-3.4C4.9 5.2 7 3 10 3z"/></svg></a>
         <a href="#" aria-label="إكس (تويتر)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
-        <a href="#" aria-label="تيك توك"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4v9.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 4c.4 2.2 2 3.8 4 4"/></svg></a>
+        <a href="https://www.tiktok.com/@m.p8949?_r=1&_d=eficm6g9cia8if&sec_uid=MS4wLjABAAAAoaLKIpmW5N7UzPi7yUDdH2AJau_dyHqjM3g3_JdbEl_7riP4zbZNCLlD0n0Jj-zl&share_author_id=7402917037787939845&sharer_language=ar&source=h5_m&u_code=eficmg99h22cch&timestamp=1791017587&user_id=7402917037787939845&sec_user_id=MS4wLjABAAAAoaLKIpmW5N7UzPi7yUDdH2AJau_dyHqjM3g3_JdbEl_7riP4zbZNCLlD0n0Jj-zl&item_author_type=1&utm_source=whatsapp_business&utm_campaign=client_share&utm_medium=android&share_iid=7684601429705492244&share_link_id=deda92b2-d962-4ca1-a481-e65bf8692ec4&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb4907&social_share_type=5&share_enter_from=settings_page&item_author_type=1&enable_checksum=1" target="_blank" rel="noopener" aria-label="تيك توك"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4v9.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 4c.4 2.2 2 3.8 4 4"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
@@ -231,7 +262,7 @@
 </div>
 <div class="float-actions">
   <a class="fa-call" href="tel:+966505664631" aria-label="اتصال"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.4 2.1L8 10.3a16 16 0 0 0 6 6l1.5-1.5a2 2 0 0 1 2.1-.4c1 .4 2 .6 3 .7a2 2 0 0 1 1.7 2z"/></svg></a>
-  <a class="fa-wa" href="https://wa.me/966505664631" aria-label="واتساب"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.3-4.8-4.2-4.9-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.8.9c.2.1.4.2.5.3.1.2.1.9-.1 1.6z"/></svg></a>
+  <a class="fa-wa" href="https://wa.me/966505664631?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D9%86%D8%B3%D9%8A%D9%85%20%D8%A7%D9%84%D8%B8%D9%84%20%D9%84%D9%84%D9%85%D8%B8%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B3%D9%88%D8%A7%D8%AA%D8%B1%20%F0%9F%8C%BF%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%88%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A." aria-label="واتساب"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.3-4.8-4.2-4.9-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 1.9.8 2.1.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.8.9c.2.1.4.2.5.3.1.2.1.9-.1 1.6z"/></svg></a>
 </div>
 <script src="site.js" defer></script>
 
