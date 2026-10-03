@@ -1,3 +1,48 @@
+// نسيم الظل — شريط الصور المتحركة أعلى كل صفحة: تبديل تلقائي كل 4 ثوانٍ
+// مع نقاط تنقّل يدوية.
+(function () {
+  "use strict";
+  var carousel = document.querySelector(".hero-carousel");
+  if (!carousel) return;
+  var slides = Array.prototype.slice.call(carousel.querySelectorAll(".hc-slide"));
+  var dotsWrap = carousel.querySelector(".hc-dots");
+  if (slides.length < 2) return;
+  var i = 0;
+  var timer;
+
+  slides.forEach(function (s, idx) {
+    var dot = document.createElement("button");
+    dot.type = "button";
+    dot.setAttribute("aria-label", "الصورة " + (idx + 1));
+    if (idx === 0) dot.className = "active";
+    dot.addEventListener("click", function () {
+      go(idx);
+      restart();
+    });
+    if (dotsWrap) dotsWrap.appendChild(dot);
+  });
+  var dots = dotsWrap ? Array.prototype.slice.call(dotsWrap.children) : [];
+
+  function go(n) {
+    slides[i].classList.remove("active");
+    if (dots[i]) dots[i].classList.remove("active");
+    i = n;
+    slides[i].classList.add("active");
+    if (dots[i]) dots[i].classList.add("active");
+  }
+
+  function next() {
+    go((i + 1) % slides.length);
+  }
+
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(next, 4500);
+  }
+
+  restart();
+})();
+
 // نسيم الظل — صندوق عرض الصور: يجمع كل صور الصفحة الحاملة لصنف lb-img
 // في مجموعة واحدة، ويتيح التنقل بينها بالسهمين أو بلوحة المفاتيح.
 (function () {
