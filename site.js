@@ -1,3 +1,32 @@
+// نسيم الظل — زر القائمة (همبرغر): فتح/إغلاق قائمة التنقل
+(function () {
+  "use strict";
+  var btn = document.getElementById("menu-toggle");
+  var menu = document.getElementById("site-menu");
+  var overlay = document.getElementById("menu-overlay");
+  if (!btn || !menu) return;
+
+  function close() {
+    menu.classList.remove("open");
+    if (overlay) overlay.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+  }
+  function toggle() {
+    var open = menu.classList.toggle("open");
+    if (overlay) overlay.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  btn.addEventListener("click", toggle);
+  if (overlay) overlay.addEventListener("click", close);
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", close);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") close();
+  });
+})();
+
 // نسيم الظل — شريط الصور المتحركة أعلى كل صفحة: تبديل تلقائي كل 4 ثوانٍ
 // مع نقاط تنقّل يدوية.
 (function () {
