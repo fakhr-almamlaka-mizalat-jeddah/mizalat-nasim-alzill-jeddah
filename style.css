@@ -185,10 +185,10 @@ footer{background:var(--ink);color:#C9BBA4;padding:36px 0;font-size:14px;}
 /* الأسئلة الشائعة بنظام أكورديون */
 .faq-item{border-top:1px solid var(--line);}
 .faq-item:last-child{border-bottom:1px solid var(--line);}
-.faq-q{width:100%;text-align:right;background:none;border:none;font-family:'Tajawal',sans-serif;font-size:16.5px;font-weight:700;color:var(--ink);padding:18px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;}
-.faq-q .plus{font-size:22px;color:var(--ochre-dark);transition:transform .25s;flex-shrink:0;}
+.faq-q{width:100%;text-align:right;background:none;border:none;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;color:var(--ink);padding:11px 2px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;line-height:1.5;}
+.faq-q .plus{font-size:16px;color:var(--ochre-dark);transition:transform .25s;flex-shrink:0;}
 .faq-item[open] .faq-q .plus{transform:rotate(45deg);}
-.faq-a{margin:0 0 18px;color:var(--ink-soft);font-size:15px;max-width:75ch;}
+.faq-a{margin:0 0 12px;color:var(--ink-soft);font-size:13px;max-width:75ch;line-height:1.75;}
 details.faq-item summary::-webkit-details-marker{display:none;}
 
 /* قسم مواعيد العمل + مشاركة الموقع في التذييل */
@@ -204,7 +204,25 @@ details.faq-item summary::-webkit-details-marker{display:none;}
 .service-feature .sf-body{padding:18px 22px 18px 0;}
 .service-feature h3{font-size:20px;margin-bottom:8px;}
 .service-feature p{color:var(--ink-soft);font-size:15px;margin-bottom:12px;}
-.service-feature a.more{color:var(--teal-deep);font-weight:700;font-size:14px;}
+.more-btn,.service-feature a.more{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(95deg,var(--teal-deep),var(--teal) 55%,var(--ochre) 130%);
+  color:#fff;font-weight:700;font-size:13.5px;
+  padding:9px 18px;border-radius:999px;
+  box-shadow:0 4px 14px rgba(19,76,76,.28);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.more-btn:hover,.service-feature a.more:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(19,76,76,.38);}
+.more-btn .arrow,.service-feature a.more .arrow{transition:transform .2s;}
+.more-btn[aria-expanded="true"] .arrow{transform:rotate(90deg);}
+.read-more-wrap{position:relative;}
+.read-more-wrap .rm-extra{display:none;}
+.read-more-wrap.open .rm-extra{display:block;}
+.read-more-wrap .more-btn{margin-top:10px;}
+
+p.rm{transition:none;}
+p.rm.rm-collapsed{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.rm-toggle{margin:4px 0 18px;}
 @media (max-width:820px){.service-feature{grid-template-columns:1fr;}.service-feature .sf-body{padding:0 18px 18px;}}
 
 /* معرض أعمال مصغر (الرئيسية) */
@@ -219,10 +237,15 @@ details.faq-item summary::-webkit-details-marker{display:none;}
 .coverage-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
 .coverage-tags span{background:var(--sand-deep);border:1px solid var(--line);padding:7px 14px;border-radius:20px;font-size:13.5px;color:var(--ink-soft);}
 
+.related-links{background:#fff;border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin-top:28px;}
+.related-links h2{font-size:19px;margin-top:0;}
+.related-links .rl-row{display:flex;flex-wrap:wrap;gap:10px 22px;}
+.related-links a{color:#8C1C13;font-weight:700;font-size:14.5px;text-decoration:underline;text-underline-offset:3px;}
+.related-links a:hover{color:#5E110C;}
+
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;}.hero-carousel .hc-slide{transition:none;}.float-actions .fa-wa{animation:none;}}
 
 @media (max-width:820px){
-  nav{display:none;}
   .gallery-strip{grid-template-columns:1fr 1fr;}
   .gallery-strip .g-tall{grid-row:span 1;aspect-ratio:1/1;}
   .type-grid{grid-template-columns:1fr;}
