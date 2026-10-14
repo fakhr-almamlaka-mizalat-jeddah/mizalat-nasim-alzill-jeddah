@@ -72,6 +72,29 @@
   restart();
 })();
 
+// نسيم الظل — "قراءة المزيد": يضغط النص الطويل المعلَّم بصنف rm إلى 3 أسطر
+// مع زر تبديل أنيق، ويبقى النص الكامل موجودًا في الصفحة (جيد لمحركات البحث).
+(function () {
+  "use strict";
+  var paras = document.querySelectorAll("p.rm");
+  paras.forEach(function (p) {
+    p.classList.add("rm-collapsed");
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "more-btn rm-toggle";
+    btn.setAttribute("aria-expanded", "false");
+    btn.innerHTML = 'قراءة المزيد <span class="arrow">←</span>';
+    p.insertAdjacentElement("afterend", btn);
+    btn.addEventListener("click", function () {
+      var collapsed = p.classList.toggle("rm-collapsed");
+      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      btn.innerHTML = collapsed
+        ? 'قراءة المزيد <span class="arrow">←</span>'
+        : 'عرض أقل <span class="arrow" style="transform:rotate(90deg)">←</span>';
+    });
+  });
+})();
+
 // نسيم الظل — صندوق عرض الصور: يجمع كل صور الصفحة الحاملة لصنف lb-img
 // في مجموعة واحدة، ويتيح التنقل بينها بالسهمين أو بلوحة المفاتيح.
 (function () {
